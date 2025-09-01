@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdbool.h>
+int main(){
+bool isonline = true;
+ if (isonline){
+      printf("\nMF IS ONLINE\n");
+ }else 
+ {
+   printf("\nMF IS OFFLINE");
+  }
+  
+ bool isStudent = true;
+ if (isStudent){
+      printf("\nUSE_LESS");
+ }else 
+ {
+   printf("\nOFFLINE AND MORE USE_LESS");
+  }
+  
+  bool forsale = false;
+ if (forsale){
+      printf("\n50 percent discount");
+ }else 
+ {
+   printf("\nNo Discount\n");
+  }
+  
+ return 0;
+ }
