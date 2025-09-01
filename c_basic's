@@ -1,0 +1,38 @@
+#include <stdio.h> //Preprocessor directive
+#include <stdbool.h>
+
+int main(){
+ printf("I LIKE PIZZA'S");
+ 
+ /* IDE STAND'S FOR
+ INTEGRATED 
+ DEVELOPMENT
+ ENVIRONMENT
+ */
+ 
+//VARIABLES= A reuseable container for value behaves as if it were the value it contains.
+//%d = FORMAT SPECIFIER.
+/*
+  %d = int;
+  %f = float;
+  %lf = double and long int;
+  %c = char;
+  %s = string;
+*/
+
+int a = 46;
+float b = 4.7967;
+double c= 25.14986534683;
+long int d = 87452643521456;
+char e = '$';
+char name[50] = "Bro Code";
+
+printf("\n%d",a);
+printf("\n%.3f",b);
+printf("\n%.3lf",c);
+printf("\n%ld",d);
+printf("\n%c",e);
+printf("\n%s",name);
+
+return 0;
+}
