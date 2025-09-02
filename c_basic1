@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main(){
+ /*
+ int=whole number(4 bytes in modern system)
+ float=single-presicion decimal number(4bytes)
+ double=double-presicion decimal number(8 bytes)
+ char=single character(1byte)
+ char[]=array of characters(size_varies)
+ bool=True or flase(1byte requires<stdbool.h>)
+ */
+ 
+ printf("\nFORMAT_SPECIFIER=Special tokens that begin with a '%' symol,followed by a character that");
+ printf("specifies the data type and optinal modifiers(width,presicion,flags\n");
+ 
+ int age =25;
+ float price =19.25;
+ double pi=3.1415926535;
+ char currency= '$';
+ char name[]="no bro";
+ 
+ printf("\n%d",age);
+ printf("\n%.5f",price);
+ printf("\n%lf",pi);
+ printf("\n%c",currency);
+ printf("\n%s\n",name);
+ 
+ //width 
+ int num1=1;
+ int num2=10;
+ int num3=100;
+ printf("\nThe Numbers is %3d__",num1);
+ printf("\nThe Numbers is %3d__",num2);
+ printf("\nThe Numbers is %3d__\n",num3);
+ 
+ //precision
+ float price1=19.99;
+ float price2=45.99;
+ float price3=84.99;
+ 
+ printf("\nThe Price is %.3f",price1);
+ printf("\nThe Price is %.3f",price2);
+ printf("\nThe Price is %.3f\n",price3);
+return 0;
+}
