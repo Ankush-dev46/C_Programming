@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int a, d, c;
+    float b = 0;
+    char s[100]; // Allocating memory for name
+
+    printf("\nENTER YOUR NAME: ");
+    scanf("%s", s);
+
+    printf("ENTER YOUR AGE: ");
+    scanf("%d", &a);
+
+    printf("ENTER YOUR GRADE: ");
+    scanf("%f", &b);
+
+    printf("Hello, %s. You are %d years old, your grade is %.2f.\nNow enter a digit: ", s, a, b);
+    scanf("%d", &c);
+    a+=2;
+    d = c + a;
+    printf("\nThe t_age is %d\n", d);
+
+    return 0;
+}
