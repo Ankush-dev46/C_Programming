@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+// SHOPPING CART PROGRAM
+
+int main()
+{
+    char item[100];
+    float total, price;
+    int quantity;
+
+    printf("\nWHAT ITEM WOULD YOU LIKE TO BUY: ");
+    fgets(item, sizeof(item), stdin);
+    item[strlen(item) - 1] = '\0';
+
+    printf("WHAT IS THE PRICE FOR EACH ITEM=:$");
+    scanf("%f", &price);
+
+    printf("HOW MANY WOULD YOU LIKE TO BUY?=:");
+    scanf("%d", &quantity);
+
+    total = price * quantity;
+
+    printf("\nGREAT, YOU LIKE TO BUY %s\n", item);
+    printf("SO, YOU NEED THIS MUCH '%d'\n", quantity);
+    printf("HE'RE YOU GO, AND YOUR TOTAL IS $%.4f\n", total);
+
+    printf("\nHAVE A NICE DAY\n");
+
+    return 0;
+}
