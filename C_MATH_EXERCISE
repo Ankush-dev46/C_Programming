@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    //MATH_EXERCISE
+    double radius, circumference, surface_area, volume;
+    const double pi = 3.14159;
+     
+    printf("\nENTER THE RADIUS: ");
+    scanf("%lf", &radius);
+     
+    // Circumference of a circle
+    circumference = 2 * pi * radius;
+    printf("\nThe circumference is: %.2f for the given radius: %.2f", circumference, radius);
+        
+    // Surface area of a sphere
+    surface_area = 4 * pi * radius * radius;
+    printf("\nThe surface area of a sphere is: %.2f for the given radius: %.2f", surface_area, radius);
+     
+    // Volume of a sphere
+    volume = (4.0/3.0) * pi * radius * radius * radius;
+    printf("\nThe volume of a sphere is: %.2f for the given radius: %.2f", volume, radius);
+
+    return 0;
+}
