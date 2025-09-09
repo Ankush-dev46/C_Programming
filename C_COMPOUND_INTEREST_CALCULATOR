@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    // COMPOUND INTEREST CALCULATOR
+    double principal,I_rate,year,Time,total;
+    
+    printf("\n******COMPOUND_INTEREST_CALCULATOR******");
+    printf("\nENTER THE PRINCIPAL(P):");
+    scanf("%lf",&principal);
+    
+    printf("ENTER THE INTEREST_RATE(I_R):");
+    scanf("%lf",&I_rate);
+    
+    printf("ENTER THE TIME(T):");
+    scanf("%lf",&Time);
+    
+    printf("ENTER THE COMPOUND_YEAR(N/Y):");
+    scanf("%lf",&year);
+    
+    total = principal*pow(1+I_rate/year,(year*Time));
+    
+    printf("\nAFTER %.0lf YEARS,THE TOTAL WILL BE $%.3lf",year,total);
+    
+    printf("\n\nJUST_DIE\n");
+
+    return 0;
+}
