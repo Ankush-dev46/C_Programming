@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdbool.h>
+int main() {
+    // IF_STATEMENT
+    int age =16;
+     if (age>=18){
+         printf("\nHE IS AN ADULT");
+     }
+     else{
+         printf("SMALL KID");
+     }
+     
+    bool isstudent=0;
+    if (isstudent==1){
+        printf(",GO TO COLLAGE");
+    }
+    else {
+        printf(",GO PLAY");
+    }
+
+    return 0;
+}
