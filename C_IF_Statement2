@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+int main() {
+    // IF_STATEMENT2
+    char name[50]="";
+    int age;
+    printf("ENTER YOUR NAME:");
+    fgets(name,sizeof(name),stdin);
+    name[strlen(name)-1]='\0';
+    
+    printf("ENTER YOUR AGE:");
+    scanf("%d",&age);
+    
+    if(strlen(name)==0){
+        printf("PLEASE ENTER THE NAME");
+    }
+    else {
+        printf("YOUR ARE NAME IS %s",name);
+    }
+    if (age==0){
+        printf("PLEASE ENTER THE AGE");
+    }
+    else {
+        printf(",YOUR ARE AGE IS %d",age);
+    }
+    return 0;
+}
