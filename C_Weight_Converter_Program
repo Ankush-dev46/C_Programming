@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    // WEIGHT CONVERSION CALCULATOR
+    int choice = 0;
+    float pounds, kilograms;
+
+    printf("\n******************** WEIGHT CONVERSION CALCULATOR *************\n");
+    printf("1. KILOGRAMS TO POUNDS\n");
+    printf("2. POUNDS TO KILOGRAMS\n");
+    printf("ENTER THE CHOICE (1 or 2): ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        printf("\nKILOGRAMS TO POUNDS\n");
+        printf("Enter the weight in kilograms: ");
+        scanf("%f", &kilograms);
+        pounds = kilograms * 2.20462;
+        printf("The weight in pounds is:%.3f\n", pounds);
+    } 
+    else if (choice == 2) {
+        printf("\nPOUNDS TO KILOGRAMS\n");
+        printf("Enter the weight in pounds: ");
+        scanf("%f", &pounds);
+        kilograms = pounds / 2.20462;
+        printf("The weight in kilograms is:%.3f\n", kilograms);
+    } 
+    else {
+        printf("\nINVALID CHOICE\n");
+    }
+
+    return 0;
+}
