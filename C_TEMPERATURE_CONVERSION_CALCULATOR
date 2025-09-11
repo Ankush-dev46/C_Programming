@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    // TEMPERATURE CONVERSION CALCULATOR
+    char choice;
+    float fahrenheit, celsius;
+
+    printf("\n******************** TEMPERATURE CONVERSION CALCULATOR *************\n");
+    printf("C. Celsius TO Fahrenheit\n");
+    printf("F. Fahrenheit TO Celsius\n");
+    printf("ENTER THE CHOICE (C or F): ");
+    scanf(" %c", &choice); // notice " %c" to ignore newline
+
+    if (choice == 'C' || choice == 'c') {
+        printf("\nCelsius TO Fahrenheit\n");
+        printf("Enter the Temperature in Celsius: ");
+        scanf("%f", &celsius); // read Celsius
+        fahrenheit = (celsius * 9.0 / 5.0) + 32; // formula
+        printf("The Temperature in Fahrenheit is: %.2f°f\n", fahrenheit);
+    } 
+    else if (choice == 'F' || choice == 'f') {
+        printf("\nFahrenheit TO Celsius\n");
+        printf("Enter the Temperature in Fahrenheit: ");
+        scanf("%f", &fahrenheit); // read Fahrenheit
+        celsius = (fahrenheit - 32) * 5.0 / 9.0; // formula
+        printf("The Temperature in Celsius is: %.2f°c\n", celsius);
+    } 
+    else {
+        printf("\nINVALID CHOICE\n");
+    }
+
+    return 0;
+}
