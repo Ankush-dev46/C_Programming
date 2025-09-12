@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    // SWITCH_FUNCTION
+    // An alternative to using many if-else statements, more efficient for fixed integer values.
+    
+    int dayofweeks;
+    printf("ENTER A NUMBER FROM '0' TO '6',\nWHERE YOU WANT TO KNOW THE DAY OF A WEEK: ");
+    scanf(" %d", &dayofweeks);
+    
+    switch (dayofweeks) {
+        case 0: printf("IT'S SUNDAY"); break;
+        case 1: printf("IT'S MONDAY"); break;
+        case 2: printf("IT'S TUESDAY"); break;
+        case 3: printf("IT'S WEDNESDAY"); break;
+        case 4: printf("IT'S THURSDAY"); break;
+        case 5: printf("IT'S FRIDAY"); break;
+        case 6: printf("IT'S SATURDAY"); break;
+        default: printf("INVALID DAY");
+    }
+
+    return 0;
+}
