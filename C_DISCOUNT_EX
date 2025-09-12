@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+    // NESTED IF STATEMENT
+    float price;
+    char Z;
+    int E;
+
+    printf("NOTE:\n");
+    printf("IF STUDENT → 10%% DISCOUNT\n");
+    printf("IF SENIOR → 20%% DISCOUNT\n");
+    printf("IF BOTH   → 30%% DISCOUNT\n");
+    printf("IF NEITHER → PAY FULL PRICE\n\n");
+
+    printf("ENTER THE PRICE: ");
+    scanf("%f", &price);
+
+    printf("ARE YOU A STUDENT OR SENIOR PERSON? (Y/N): ");
+    scanf(" %c", &Z);
+
+    if (Z == 'Y' || Z == 'y') {
+        printf("CHOOSE AN OPTION:\n");
+        printf("1. STUDENT\n");
+        printf("2. SENIOR\n");
+        printf("3. BOTH\n");
+        printf("4. EXIT (NO DISCOUNT)\n");
+        scanf("%d", &E);
+
+        if (E == 1) {
+            printf("YOU GET A STUDENT DISCOUNT OF 10%%\n");
+            price *= 0.9;
+        } else {
+            if (E == 2) {
+                printf("YOU GET A SENIOR DISCOUNT OF 20%%\n");
+                price *= 0.8;
+            } else {
+                if (E == 3) {
+                    printf("YOU GET BOTH STUDENT AND SENIOR DISCOUNT OF 30%%\n");
+                    price *= 0.7;
+                } else {
+                    if (E == 4) {
+                        printf("NO DISCOUNT APPLIED\n");
+                    } else {
+                        printf("INVALID OPTION\n");
+                    }
+                }
+            }
+        }
+    } else {
+        printf("NO DISCOUNT. FULL PAYMENT REQUIRED.\n");
+    }
+
+    printf("FINAL PRICE: $%.2f\n", price);
+
+    return 0;
+}
