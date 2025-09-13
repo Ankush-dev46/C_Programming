@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    // CALCULATOR PROBLEM
+    char operator = '\0';
+    double num1, num2, ans;
+    
+    printf("***********CALCULATOR PROBLEM*************");
+    
+    printf("\nENTER THE NUMBER(NUM1): ");
+    scanf("%lf", &num1);
+    
+    printf("ENTER THE OPERATOR('+','-','*','/'): ");
+    scanf(" %c", &operator);
+    
+    printf("ENTER THE NUMBER(NUM2): ");
+    scanf("%lf", &num2);
+    
+    switch(operator) {
+        case '+':
+            ans = num1 + num2;
+            printf("THE ADDITION (SUM) ANSWER IS %.3lf", ans);
+            break;
+        case '-':
+            ans = num1 - num2;
+            printf("THE SUBTRACTION (SUB) ANSWER IS %.3lf", ans);
+            break;
+        case '*':
+            ans = num1 * num2;
+            printf("THE MULTIPLICATION (*) ANSWER IS %.3lf", ans);
+            break;
+        case '/':
+            if (num2 == 0) {
+                printf("THE NUMBER CAN'T BE DIVIDED BY ZERO");
+            } else {
+                ans = num1 / num2;
+                printf("THE DIVIDED ANSWER IS %.3lf", ans);
+            }
+            break;
+        default:
+            printf("INVALID OPERATOR!");
+    }
+
+    return 0;
+}
