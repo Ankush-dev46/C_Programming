@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdbool.h>
+int main() {
+    // LOGICAL OPERATORS
+    // USED TO COMBINE OR MODIFY BOOLEAN EXPRESSIONS
+    // && = AND LOGIC
+    // || = OR LOGIC
+    // ! = NOT LOGIC
+    
+    bool isSunny = 1;
+    
+    
+    if (!isSunny) {
+        printf("IT'S NORMAL");
+    } else {
+            printf("TEMPERATURE IS MODERATE BUT NOT NORMAL RANGE,AND MAY BE RAIN TODAY");
+        }
+    
+
+    return 0;
+}
