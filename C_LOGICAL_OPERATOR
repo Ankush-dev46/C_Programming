@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    // LOGICAL OPERATORS
+    // USED TO COMBINE OR MODIFY BOOLEAN EXPRESSIONS
+    // && = AND LOGIC
+    // || = OR LOGIC
+    // ! = NOT LOGIC
+    
+    int temp;
+    printf("ENTER THE TEMPERATURE: ");
+    scanf("%d", &temp);
+    
+    if (temp >= 20 && temp <= 30) {
+        printf("IT'S NORMAL");
+    } else {
+        if (temp >= 40 || temp <= 0) {
+            printf("NOT GOOD FOR LIVING");
+        } else {
+            printf("TEMPERATURE IS MODERATE BUT NOT NORMAL RANGE");
+        }
+    }
+
+    return 0;
+}
