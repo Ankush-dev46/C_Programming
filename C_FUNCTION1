@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void Happy_Birth_day(char name[50],int age){
+printf("\nHAPPY BIRTHDAY TO YOU!");
+printf("\nHAPPY BIRTHDAY TO YOU!");
+printf("\nHAPPY BIRTHDAY TO YOU %s!",name);
+printf("\nYOU ARE %d YEARS OLD!",age);
+printf("\nHAPPY BIRTHDAY TO YOUUUUUUUU!\n");
+}
+
+int main(){
+//FUNCTION = A RESUABLE SECTION OF CODE THAT CAN BE INVOKED CALLED AGRGUMENTS CAN BE SENT TO A FUNCTION SO IT CAN BE SENT
+//TO A FNCTION SO THAT IT CAN USE THEM
+
+char name[50] = "BRO_CODE";
+int age = 40;
+
+Happy_Birth_day(name,age);
+
+return 0;
+}
