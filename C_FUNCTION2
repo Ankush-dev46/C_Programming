@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+void Calculator(double num1,double ans,double num2,char operator){
+    printf("***********CALCULATOR PROBLEM*************");
+    
+    printf("\nENTER THE NUMBER(NUM1): ");
+    scanf("%lf", &num1);
+    
+    printf("ENTER THE OPERATOR('+','-','*','/'): ");
+    scanf(" %c", &operator);
+    
+    printf("ENTER THE NUMBER(NUM2): ");
+    scanf("%lf", &num2);
+    
+    switch(operator) {
+        case '+':
+            ans = num1 + num2;
+            printf("THE ADDITION (SUM) ANSWER IS %.3lf", ans);
+            break;
+        case '-':
+            ans = num1 - num2;
+            printf("THE SUBTRACTION (SUB) ANSWER IS %.3lf", ans);
+            break;
+        case '*':
+            ans = num1 * num2;
+            printf("THE MULTIPLICATION (*) ANSWER IS %.3lf", ans);
+            break;
+        case '/':
+            if (num2 == 0) {
+                printf("THE NUMBER CAN'T BE DIVIDED BY ZERO");
+            } else {
+                ans = num1 / num2;
+                printf("THE DIVIDED ANSWER IS %.3lf", ans);
+            }
+            break;
+        default:
+            printf("INVALID OPERATOR!");
+    }
+}
+
+int main(){
+//FUNCTION = A RESUABLE SECTION OF CODE THAT CAN BE INVOKED CALLED AGRGUMENTS CAN BE SENT TO A FUNCTION SO IT CAN BE SENT
+//TO A FNCTION SO THAT IT CAN USE THEM
+
+double num1,num2,ans;
+char operator;
+
+Calculator(num1,num2,ans,operator);
+return 0;
+}
