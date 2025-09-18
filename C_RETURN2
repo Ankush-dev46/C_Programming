@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+bool AgeCheck(int age) {
+    if (age >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+int main() {
+    // Return = return a value back to where you call a function
+    int age = 9;
+
+    if (AgeCheck(age)) {
+        printf("\nYOU CAN SIGN-IN, as you are %d years old.\n", age);
+    } else {
+        printf("STILL A CHILD, BE A GOOD BOY AND PLAY CANDY CRUSH.\n");
+    }
+
+    return 0;
+}
