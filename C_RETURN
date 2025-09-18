@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int square(int num) {
+    return num * num;
+}
+
+int main() {
+//Return = return a value back to where you call a function
+    int x = square(2);
+    int y = square(6);
+    int z = square(4);
+    int a = square(7);
+    printf("\nThe number is %d", x);
+     printf("\nThe number is %d", y);
+      printf("\nThe number is %d", z);
+       printf("\nThe number is %d\n", a);
+
+    return 0;
+}
