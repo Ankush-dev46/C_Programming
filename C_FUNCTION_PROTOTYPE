@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+// Function prototypes
+//PROVIDE THE COMPILER WORK/INFORMATION ABOUT A FUNCTION'B'
+//NAME,RETURN TYPE AND PARAMETERS BEFORE ITS ACTUCAL DEFINITION.
+//ENABLE TYPE CHECKING AND ALLOWS FUNCTION TO BE USED BEFORE THEY'RE DEFINED
+//IMPROVES READABILITY,ORGANIZATION AND HELPS PREVENTS ERRORS.
+
+void Hello(char name[50], int age);
+bool check_age(int age);
+
+int main() {
+    Hello("BRO_CODE", 6);
+
+    if (check_age(14)) {
+        printf("YOU ARE OLD ENOUGH TO WORK AT GOOGLE\n");
+    } else {
+        printf("YOU MUST BE 20+ TO WORK AT GOOGLE\n");
+    }
+
+    return 0;
+}
+
+// Function to print name and age
+void Hello(char name[50], int age) {
+    printf("SO, YOUR NAME IS %s\n", name);
+    printf("AND YOU ARE %d\n", age);
+}
+
+// Function to check if age is 20 or more
+bool check_age(int age) {
+    return age >= 20;
+}
