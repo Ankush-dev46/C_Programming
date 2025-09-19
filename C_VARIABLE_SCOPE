@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+//VARIABLE SCOPE = REFERS TO WHERE A VARIABLE IS RECOGNINZED AND ACCESSIBLE.
+//VARIABLES CAN SHARE NAME IF THEY'RE IN DIFFERENT SCOPE {}
+
+//LOCAL = CALL INSIDE THE FUNCTION OR MAIN 
+//GLOBAL SCOPE [HARD TO BEGUG]
+//WRITEN OUTSIDE THE MAIN FUNCTION
+
+int result;//GOBAL SCOPE 
+
+int Add(int x,int y) {
+result = x + y;
+return result;
+}
+
+int Sub(int x,int y) {
+result = x - y;
+return result;
+}
+
+int main(){
+int x,y;
+result = Add(5,6);
+printf("THE ANSWER IS %d\n",result);
+
+result = Sub(8,6);
+printf("THE ANSWER IS %d\n",result);
+return 0;
+}
