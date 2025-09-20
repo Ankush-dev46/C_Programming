@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+ //WHILE LOOP= CONTINUE SOME CODE WHILE THE CONDITION REMAINS TURE'
+ //CONDITION MUST BE TRUE FOR US TO ENTER THE WHILE LOOP
+ while(1 ==1) {
+ printf("YOU ARE STUCK IN A LOOP\n");
+ }
+ 
+
+return 0;
+}
