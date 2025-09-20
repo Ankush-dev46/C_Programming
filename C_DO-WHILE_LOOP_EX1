@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+
+    char name[50] = "";  // initialize with empty string
+    printf("ENTER YOUR NAME: ");
+
+
+    do { 
+        fgets(name, sizeof(name), stdin);
+        name[strlen(name) - 1] = '\0';
+        if (strlen(name) ==0) {
+        printf("PLEASE ENTER YOUR NAME! IT CANNOT BE EMPTY:\n");
+        }
+    }while (strlen(name) == 0);
+
+    int age = 0;
+    do {
+        printf("Enter your age (must be greater than 0): ");
+        scanf("%d", &age);
+
+        if (age <= 0) {
+            printf("Invalid age. Please enter a number greater than 0.\n");
+        }
+    }while (age <= 0);
+
+    // Optional: confirmation output
+    printf("\nWelcome, %s! You are %d years old.\n", name, age);
+
+    return 0;
+}
+ 
