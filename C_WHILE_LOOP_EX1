@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+ //WHILE LOOP= CONTINUE SOME CODE WHILE THE CONDITION REMAINS TURE'
+ //CONDITION MUST BE TRUE FOR US TO ENTER THE WHILE LOOP
+
+ int num =0;
+ while(num>=0) {
+   printf("THE NUMBER IS GRATER THE ZERO\n");
+   scanf("%d",&num);
+   }
+   
+
+return 0;
+}
