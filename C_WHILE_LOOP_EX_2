@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // WHILE LOOP = CONTINUE SOME CODE WHILE THE CONDITION REMAINS TRUE
+    // CONDITION MUST BE TRUE FOR US TO ENTER THE WHILE LOOP
+
+    char name[50] = "";  // initialize with empty string
+    printf("ENTER YOUR NAME: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';  // remove newline character
+
+    while (strlen(name) == 0) {
+        printf("PLEASE ENTER YOUR NAME! IT CANNOT BE EMPTY:\n");
+        fgets(name, sizeof(name), stdin);
+        name[strlen(name) - 1] = '\0';
+    }
+
+    int age = 0;
+    while (age <= 0) {
+        printf("Enter your age (must be greater than 0): ");
+        scanf("%d", &age);
+
+        if (age <= 0) {
+            printf("Invalid age. Please enter a number greater than 0.\n");
+        }
+    }
+
+    printf("\nWelcome, %s! You are %d years old.\n", name, age);
+
+    return 0;
+}
