@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    bool Is_playing = 1;
+    char response = '\0';
+
+    while (Is_playing) {
+        printf("\nSO, YOU ARE PLAYING THE GAME.");
+        printf("\nNOW DO YOU WANT TO EXIT THE GAME? (Y/N): ");
+
+        scanf(" %c", &response);  // space before %c skips any leftover newline characters
+
+        if (response == 'y' || response == 'Y') {
+            Is_playing = 0;
+        }
+    }
+
+    printf("YOU EXITED THE GAME.\n");
+    return 0;
+}
