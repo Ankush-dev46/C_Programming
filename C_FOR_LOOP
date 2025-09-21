@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <unistd.h>
+int main() {
+    //FOR_LOOP =REPEATS SOME CODE,A LIMITED # OF TIME
+    //for(INITIALIZATION;CONDITION;UPDATE);
+    
+    for(int i=0;i<10;i++) {
+    
+    printf("%d",i);
+}
+    return 0;
+}
