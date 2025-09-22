@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    // NESTED FOR LOOP
+    printf("******@@@@@@@@@******\n");
+
+    int row, column;
+
+    printf("ENTER THE NUMBER OF ROWS: ");
+    scanf("%d", &row);
+
+    printf("ENTER THE NUMBER OF COLUMNS: ");
+    scanf("%d", &column);
+
+    int r1[100], c1[100];  // Declare arrays with maximum size or use dynamic allocation
+
+    printf("ENTER THE ROW VALUES:\n");
+    for(int i = 0; i < row; i++) {
+        scanf("%d", &r1[i]);
+    }
+
+    printf("ENTER THE COLUMN VALUES:\n");
+    for(int i = 0; i < column; i++) {
+        scanf("%d", &c1[i]);
+    }
+
+    printf("Resulting Matrix (r1[i] + c1[j]):\n");
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < column; j++) {
+            int t1 = r1[i] + c1[j];
+            printf("%d ", t1);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
