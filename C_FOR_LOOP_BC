@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+//Break = BREAK OUT OF THE LOOP(STOP).
+//CONTINUE = SKIP CURRENT CYCLE OF A LOOP(SKIP).
+
+for(int i=10;i>=0;i--){
+sleep(1);
+if(i==4) {
+//break;
+continue;
+}
+printf("%d \n",i);
+}
+printf("HAPPY NEW YEA \n");
+return 0;
+}
