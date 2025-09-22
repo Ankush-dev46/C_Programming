@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    // NESTED FOR LOOP
+    printf("******@@@@@@@@@******\n");
+
+    int row, column;
+    char a;
+
+    printf("ENTER THE NUMBER OF ROWS: ");
+    scanf("%d", &row);
+
+    printf("ENTER THE NUMBER OF COLUMNS: ");
+    scanf("%d", &column);
+
+    // Clear the newline character left in the buffer
+    getchar();
+
+    printf("ENTER THE SYMBOL: ");
+    scanf("%c", &a);
+
+    for (int i = 1; i <= row; i++) {
+        for (int j = 1; j <= column; j++) {
+            printf("%c ", a);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
