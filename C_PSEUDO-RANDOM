@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+//PSEUDO-RANDOM = APPEARS RANDOM BUT ARE DETERMINED BY A MATHEMATICAL FORMULA
+//THAT USES A SEED VALUE TO GENERATE A PREDICTABLE SEQUENCE OF NUMBERS.
+ //ADVANCED:-MERSENNE TWISTER OR DEV/RANDOM.
+
+    printf("%d\n", rand()); // Before seeding
+
+    srand(time(NULL)); // 1. Seed RNG
+    printf("%d\n", rand()); // After seeding
+
+    // 2. Random 0 or 1, then 1 or 2
+    int random_num = rand() % 2;
+    printf("%d\n", random_num);
+
+    int random_num1 = rand() % 2 + 1;
+    printf("%d\n", random_num1);
+
+    // 3. Random between min and max
+    int min = 5, max = 10;
+    int random_num2 = min + rand() % (max - min + 1);
+    printf("%d\n", random_num2);
+
+    // 4. Another way - fixed precedence
+    int random_num3 = min + rand() % (max - min + 1);
+    printf("%d\n", random_num3);
+
+    // 5. Random 0 to 99
+    int random_num4 = rand() % 100;
+    printf("%d\n", random_num4);
+
+    return 0;
+}
