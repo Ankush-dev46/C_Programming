@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(0)); // Seed the random number generator
+    int min = 1;
+    int max = 10;
+    int Guess, tries = 0, ans;
+
+    ans = (min + rand() % (max - min + 1)); // Generate a random number between min and max
+
+    printf("\n******** THE GUESSING GAME ********\n");
+
+    do {
+        printf("\nGUESS A NUMBER FROM %d TO %d: ", min, max);
+        scanf("%d", &Guess);
+        tries++;
+
+        if (Guess > ans) {
+            printf("TOO HIGH\n");
+        } else if (Guess < ans) {
+            printf("TOO LOW\n");
+        } else {
+            printf("CORRECT!\n");
+        }
+    } while (Guess != ans);
+
+    printf("\nTHE ANSWER WAS %d\n", ans);
+    printf("NUMBER OF TRIES: %d\n", tries);
+
+    return 0;
+}
