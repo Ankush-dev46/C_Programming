@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+// Function declarations
+int getcomputerchoice();
+int getuserchoice();
+void checkwinner(int userchoice, int computerchoice);
+
+int main() {
+    srand(time(NULL));
+    printf("**** ROCK PAPER SCISSORS ****\n");
+
+    int userchoice = getuserchoice();
+    int computerchoice = getcomputerchoice();
+
+    printf("Your choice: ");
+    switch(userchoice) {
+        case 1: printf("ROCK\n"); break;
+        case 2: printf("PAPER\n"); break;
+        case 3: printf("SCISSORS\n"); break;
+    }
+
+    printf("Computer's choice: ");
+    switch(computerchoice) {
+        case 1: printf("ROCK\n"); break;
+        case 2: printf("PAPER\n"); break;
+        case 3: printf("SCISSORS\n"); break;
+    }
+
+    checkwinner(userchoice, computerchoice);
+    return 0;
+}
+
+// Function to get a random choice for the computer
+int getcomputerchoice() {
+    return rand() % 3 + 1;  // returns 1, 2, or 3
+}
+
+// Function to get a valid user choice
+int getuserchoice() {
+    int choice;
+    do {
+        printf("\nChoose an option:\n");
+        printf("1. ROCK\n");
+        printf("2. PAPER\n");
+        printf("3. SCISSORS\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+    } while (choice < 1 || choice > 3);
+    return choice;
+}
+
+// Function to determine the winner
+void checkwinner(int userchoice, int computerchoice) {
+    if (userchoice == computerchoice) {
+        printf("It's a Tie!\n");
+    } else if ((userchoice == 1 && computerchoice == 3) ||
+               (userchoice == 2 && computerchoice == 1) ||
+               (userchoice == 3 && computerchoice == 2)) {
+        printf("You Win!\n");
+    } else {
+        printf("Computer Wins!\n");
+    }
+}
