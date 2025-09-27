@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+// Function declarations
+void checkbalance(float balance);
+float deposit();
+float withdraw(float balance);
+
+int main() {
+    int choice = 0;
+    float balance = 0.0f;
+
+    printf("****** WELCOME TO THE BANK *******\n");
+
+    do {
+        printf("\nSELECT AN OPTION\n");
+        printf("1. CHECK BALANCE\n");
+        printf("2. DEPOSIT MONEY\n");
+        printf("3. WITHDRAW MONEY\n");
+        printf("4. EXIT\n");
+        printf("Enter your choice: ");
+        scanf(" %d", &choice);
+
+        switch (choice) {
+            case 1:
+                checkbalance(balance);
+                break;
+            case 2:
+                balance += deposit();
+                break;
+            case 3:
+                balance -= withdraw(balance);
+                break;
+            case 4:
+                printf("***** THANK YOU *****\n");
+                break;
+            default:
+                printf("INVALID ENTRY\n");
+        }
+    } while (choice != 4);
+
+    return 0;
+}
+
+void checkbalance(float balance) {
+    printf("\nYOUR CURRENT BALANCE IS: $%.2f\n", balance);
+}
+
+float deposit() {
+    float amount = 0.0f;
+    printf("\nENTER AMOUNT TO DEPOSIT: $");
+    scanf("%f", &amount);
+
+    if (amount <= 0) {
+        printf("INVALID AMOUNT\n");
+        return 0.0f;
+    } else {
+        printf("SUCCESSFULLY DEPOSITED $%.2f\n", amount);
+        return amount;
+    }
+}
+
+float withdraw(float balance) {
+    float amount = 0.0f;
+    printf("\nENTER AMOUNT TO WITHDRAW: $");
+    scanf("%f", &amount);
+
+    if (amount <= 0) {
+        printf("INVALID AMOUNT!\n");
+        return 0.0f;
+    } else if (amount > balance) {
+        printf("INSUFFICIENT FUNDS! YOUR BALANCE IS $%.2f\n", balance);
+        return 0.0f;
+    } else {
+        printf("SUCCESSFULLY WITHDREW $%.2f\n", amount);
+        return amount;
+    }
+}
