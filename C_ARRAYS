@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+ //ARRAY = A FIXED SIZE COLLECTION OF ELEMENTS OF THE SAME DATA TYPE
+ //(SIMILAR TO A VARIABLE,BUT IT HOLDS MORE THAN '1'/ONE VALUE
+   int number[] = {0, 1, 2, 3, 4, 5, 6};
+   printf("%d", number[0]); // Prints the first element, which is 0
+   return 0;
+}
